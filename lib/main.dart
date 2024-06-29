@@ -14,27 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter First App',
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.yellow,
-                Colors.purple,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              'Welcome to Flutter',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-              ),
-            ),
-          ),
-        ),
+        body: const GradientContainer(),
         backgroundColor: Colors.deepPurple,
         appBar: AppBar(
           title: const Text('Welcome to Flutter'),
@@ -62,6 +42,35 @@ class MyApp extends StatelessWidget {
         //     ],
         //   ),
         // ),
+      ),
+    );
+  }
+}
+
+class GradientContainer extends StatelessWidget {
+  const GradientContainer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.yellow,
+            Colors.purple,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
+      child: const Center(
+        child: Text(
+          'Welcome to Flutter',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 28,
+          ),
+        ),
       ),
     );
   }
