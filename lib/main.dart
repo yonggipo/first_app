@@ -14,16 +14,30 @@ class MyApp extends StatelessWidget {
       title: 'Flutter First App',
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
+        // body: Container(
+        //   decoration: const BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [
+        //         Colors.yellow,
+        //         Colors.purple,
+        //       ],
+        //       begin: Alignment.topLeft,
+        //       end: Alignment.bottomRight,
+        //     ),
+        //   ),
+        //   child: const Text('Welcome to Flutter'),
+        // ),
+        backgroundColor: Colors.deepPurple,
         appBar: AppBar(
           title: const Text('Welcome to Flutter'),
         ),
         body: Container(
           width: double.infinity,
           padding: const EdgeInsets.all(12),
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 'Flutter - The Complete Guide Course',
                 textAlign: TextAlign.center,
