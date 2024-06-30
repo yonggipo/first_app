@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter First App',
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
-        body: const GradientContainer(),
+        body: const GradientContainer(
+          [Colors.yellow, Colors.purple],
+        ),
         backgroundColor: Colors.deepPurple,
         appBar: AppBar(
           title: const Text('Welcome to Flutter'),
