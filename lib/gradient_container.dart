@@ -11,6 +11,11 @@ class GradientContainer extends StatelessWidget {
 
   final List<Color> colors;
 
+  const GradientContainer.custom({super.key})
+      : colors = const [Colors.yellow, Colors.purple];
+
+  void rollDice() {}
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,8 +26,20 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledText('Welcome to Flutter'),
+      child: Center(
+        // child: StyledText('Welcome to Flutter'),
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/dice-images/dice-1.png',
+              width: 200,
+            ),
+            TextButton(
+                // onPressed: () {}, 익명 함수
+                onPressed: rollDice,
+                child: const StyledText('Roll Dice'))
+          ],
+        ),
       ),
     );
   }
