@@ -29,14 +29,27 @@ class GradientContainer extends StatelessWidget {
       child: Center(
         // child: StyledText('Welcome to Flutter'),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               'assets/images/dice-images/dice-1.png',
               width: 200,
             ),
+            // padding 대안
+            const SizedBox(
+              height: 20,
+            ),
             TextButton(
                 // onPressed: () {}, 익명 함수
                 onPressed: rollDice,
+                style: TextButton.styleFrom(
+                    // padding: const EdgeInsets.only(
+                    //   top: 20,
+                    // ),
+                    foregroundColor: Colors.white,
+                    textStyle: const TextStyle(
+                      fontSize: 28,
+                    )),
                 child: const StyledText('Roll Dice'))
           ],
         ),
